@@ -1,18 +1,21 @@
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-const Rating = ({ rating, onClick, style }) => {
+const Rating = ({ rating, style }) => {
+  const filledStars = rating >= 4.5 ? 5 : 4;
+
   return (
-    <>
-      {[...Array(5)].map((_, i) => (
+    <div style={{ display: 'inline-block' }}>
+      {[...Array(filledStars)].map((_, i) => (
         <span key={i} style={style}>
-          {rating > i ? (
-            <AiFillStar fontSize="15px" />
-          ) : (
-            <AiOutlineStar fontSize="15px" />
-          )}
+          <AiFillStar fontSize="15px" />
         </span>
       ))}
-    </>
+      {[...Array(5 - filledStars)].map((_, i) => (
+        <span key={i + filledStars} style={style}>
+          <AiOutlineStar fontSize="15px" />
+        </span>
+      ))}
+    </div>
   );
 };
 
