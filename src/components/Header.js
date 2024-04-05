@@ -14,7 +14,7 @@ const Header = () => {
     <Navbar bg='dark' variant='dark' position='fixed' style={{ height: 60 }}>
       <Container >
 
-        <Navbar.Brand style={{ paddingLeft: 14 }}>
+        <Navbar.Brand style={{ paddingLeft: 14, fontSize: 19 }}>
           <img src="/logo.png" alt="Logo" style={{ marginRight: 10, height: 20, width: 20 }} />
           <Link to='/'><b>InnoCaption</b></Link>
         </Navbar.Brand>
@@ -42,7 +42,7 @@ const Header = () => {
               <Badge className="btn btn-secondary" style={{ height: 20 }} >{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{ minWidth: 370, marginLeft: -150 }}>
+            <Dropdown.Menu style={{ minWidth: 370, marginLeft: -150, fontSize: 14 }}>
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -57,7 +57,7 @@ const Header = () => {
                         <span>$ {prod.price}</span>
                       </div>
                       <AiFillDelete
-                        fontSize="20px"
+                        fontSize="14px"
                         style={{ cursor: "pointer" }}
                         onClick={() =>
                           dispatch({
@@ -69,7 +69,7 @@ const Header = () => {
                     </span>
                   ))}
                   <Link to="/cart">
-                    <Button className="btn btn-warning" style={{ width: "95%", margin: "0 10px" }}>
+                    <Button className="btn btn-warning" style={{ width: "95%", margin: "0 10px", fontSize: 14 }}>
                       Go To Cart
                     </Button>
                   </Link>

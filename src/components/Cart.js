@@ -23,19 +23,19 @@ const Cart = () => {
         <ListGroup style={{ marginLeft: '-151px' }}>
           {cart.map((prod) => (
             <ListGroup.Item key={prod.id}>
-              <Row style={{ height: 120, width: 1050 }}>
+              <Row style={{ height: 70, width: 1050 }}>
                 <Col md={2}>
-                  <Image style={{ height: 120, width: 100 }} src={prod.images[0]} alt={prod.title} fluid rounded />
+                  <Image style={{ height: 70, width: 80 }} src={prod.images[0]} alt={prod.title} fluid rounded />
                 </Col>
                 <Col md={2}>
-                  <span>{prod.title}</span>
+                  <span style={{ fontSize: 15 }}>{prod.title}</span>
                 </Col>
-                <Col md={2}>$ {prod.price}</Col>
+                <Col style={{ fontSize: 15 }} md={2}>$ {prod.price}</Col>
                 <Col md={2}>
-                  <Rating rating={prod.rating} />
+                  <Rating style={{ fontSize: 15 }} rating={prod.rating} />
                 </Col>
                 <Col md={2}>
-                  <Form.Control
+                  <Form.Control style={{ height: 30, width: 80 }}
                     as="select"
                     value={prod.qty}
                     onChange={(e) =>
@@ -64,7 +64,7 @@ const Cart = () => {
                       })
                     }
                   >
-                    <AiFillDelete fontSize="20px" />
+                    <AiFillDelete fontSize="15px" />
                   </Button>
                 </Col>
               </Row>
@@ -73,13 +73,13 @@ const Cart = () => {
         </ListGroup>
       </div>
       <div className="filters summary">
-        <span className="title">Subtotal ({cart.length}) items</span>
-        <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
-        <Button className="btn btn-warning" type="button" disabled={cart.length === 0}>
+        <span style={{ fontSize: 18 }} className="title" >Subtotal ({cart.length}) items</span>
+        <span style={{ fontWeight: 700, fontSize: 15 }}>Total: ₹ {total}</span>
+        <Button style={{ fontSize: 15 }} className="btn btn-warning" type="button" disabled={cart.length === 0}>
           Proceed to Checkout
         </Button>
       </div>
-    </div>
+    </div >
   );
 };
 

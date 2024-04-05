@@ -44,7 +44,7 @@ const Filters = () => {
           checked={sort === "highToLow" ? true : false}
         />
       </span>
-      <Button
+      <Button style={{ width: 140, height: 32, fontSize: 13 }}
         variant="light"
         onClick={() =>
           productDispatch({

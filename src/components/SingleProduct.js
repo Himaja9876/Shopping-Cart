@@ -13,7 +13,7 @@ const SingleProduct = ({ prod }) => {
     <div className="products">
       <Card className='card'>
         <Card.Img style={{
-          height: 220, width: 253, paddingLeft: 10, paddingTop: 10
+          height: 220, width: 263, paddingLeft: 10, paddingTop: 10
         }} variant="top" src={prod.images[0]} alt={prod.name} />
         <Card.Body>
           <Card.Title style={{ fontSize: 16 }}>{prod.title}</Card.Title>

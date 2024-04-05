@@ -34,10 +34,10 @@
   color: #444c53;
 }
 
-/* Home Page */
 
 .home {
   display: flex;
+  margin-right: -13px;
 }
 
 .filters {
@@ -47,6 +47,7 @@
   display: flex;
   flex-direction: column;
   width: 240px;
+  font-size: 14px;
   margin-left: 12px;
   margin-top: 71px;
   position:absolute;
@@ -60,7 +61,7 @@
 }
 
 .title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold ;
 }
 
@@ -80,7 +81,7 @@
 
 .card{
   height: 435px;
-  width: 280px;
+  width: 275px;
 }
 
 .price{
