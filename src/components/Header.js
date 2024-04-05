@@ -11,7 +11,7 @@ const Header = () => {
     state: { cart }, dispatch, productDispatch, } = CartState();
 
   return (
-    <Navbar bg='dark' variant='dark' position='fixed' style={{ height: 80 }}>
+    <Navbar bg='dark' variant='dark' position='fixed' style={{ height: 60 }}>
       <Container >
 
         <Navbar.Brand style={{ paddingLeft: 14 }}>
@@ -21,7 +21,7 @@ const Header = () => {
 
         <Navbar.Text className="search">
           <FormControl
-            style={{ width: 700 }}
+            style={{ width: 600, height: 31 }}
             type="search"
             placeholder="Search a product..."
             className="m-auto"
@@ -37,12 +37,12 @@ const Header = () => {
 
         <Nav>
           <Dropdown alignright="true">
-            <Dropdown.Toggle variant="secondary">
-              <FaShoppingCart color="white" fontSize="25px" />
-              <Badge className="btn btn-secondary">{cart.length}</Badge>
+            <Dropdown.Toggle variant="secondary" style={{ height: 38, width: 70 }}>
+              <FaShoppingCart color="white" fontSize="25px" style={{ width: 18 }} />
+              <Badge className="btn btn-secondary" style={{ height: 20 }} >{cart.length}</Badge>
             </Dropdown.Toggle>
 
-            <Dropdown.Menu style={{ minWidth: 370 }}>
+            <Dropdown.Menu style={{ minWidth: 370, marginLeft: -150 }}>
               {cart.length > 0 ? (
                 <>
                   {cart.map((prod) => (
@@ -69,7 +69,7 @@ const Header = () => {
                     </span>
                   ))}
                   <Link to="/cart">
-                    <Button style={{ width: "95%", margin: "0 10px" }}>
+                    <Button className="btn btn-warning" style={{ width: "95%", margin: "0 10px" }}>
                       Go To Cart
                     </Button>
                   </Link>

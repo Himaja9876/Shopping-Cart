@@ -23,9 +23,9 @@ const Cart = () => {
         <ListGroup style={{ marginLeft: '-151px' }}>
           {cart.map((prod) => (
             <ListGroup.Item key={prod.id}>
-              <Row>
+              <Row style={{ height: 120, width: 1050 }}>
                 <Col md={2}>
-                  <Image src={prod.images[0]} alt={prod.title} fluid rounded />
+                  <Image style={{ height: 120, width: 100 }} src={prod.images[0]} alt={prod.title} fluid rounded />
                 </Col>
                 <Col md={2}>
                   <span>{prod.title}</span>
@@ -75,7 +75,7 @@ const Cart = () => {
       <div className="filters summary">
         <span className="title">Subtotal ({cart.length}) items</span>
         <span style={{ fontWeight: 700, fontSize: 20 }}>Total: ₹ {total}</span>
-        <Button type="button" disabled={cart.length === 0}>
+        <Button className="btn btn-warning" type="button" disabled={cart.length === 0}>
           Proceed to Checkout
         </Button>
       </div>

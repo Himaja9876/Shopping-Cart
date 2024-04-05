@@ -34,8 +34,6 @@ const Context = ({ children }) => {
     dispatch({ type: 'SET_PRODUCTS', payload: products });
   }, [products]);
 
-  console.log(products);
-
   const [productState, productDispatch] = useReducer(productReducer, {
     byStock: false,
     byRating: 0,

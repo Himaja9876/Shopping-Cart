@@ -11,7 +11,7 @@ const Filters = () => {
 
   return (
     <div className="filters">
-      <span className="title">Filters</span>
+      <span className="title">Sort by Filters</span>
       <span>
         <Form.Check
           inline

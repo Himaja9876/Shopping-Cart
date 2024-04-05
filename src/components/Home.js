@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <div className='home'>
       <Filters />
-      <div className='row' style={{ paddingLeft: 318, paddingRight: 5, width: '100%', backgroundColor: '#f0e6e8' }}>
+      <div className='row' style={{ paddingLeft: 260, paddingRight: 0, width: '100%', backgroundColor: '#f0e6e8' }}>
         {transformProducts().map((prod) => (
           <div className='col-md-3' key={prod.id}>
             <SingleProduct prod={prod} />

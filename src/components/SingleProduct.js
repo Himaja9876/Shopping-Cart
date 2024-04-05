@@ -13,18 +13,19 @@ const SingleProduct = ({ prod }) => {
     <div className="products">
       <Card className='card'>
         <Card.Img style={{
-          height: 270, width: 310, paddingLeft: 17, paddingTop: 17
+          height: 220, width: 253, paddingLeft: 10, paddingTop: 10
         }} variant="top" src={prod.images[0]} alt={prod.name} />
         <Card.Body>
-          <Card.Title>{prod.title}</Card.Title>
+          <Card.Title style={{ fontSize: 16 }}>{prod.title}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
             <div className='description'>{prod.description}</div>
             <div className='price'>Price: ${prod.price}</div>
-            <div>{prod.rating} <Rating rating={prod.rating} /></div>
+            <div className='rating'>{prod.rating} <Rating rating={prod.rating} /></div>
           </Card.Subtitle>
           {cart.some((p) => p.id === prod.id) ? (
             <Button
               variant="secondary"
+              style={{ height: 32, width: 140, fontSize: 12 }}
               onClick={() =>
                 dispatch({
                   type: "REMOVE_FROM_CART",
@@ -37,6 +38,7 @@ const SingleProduct = ({ prod }) => {
           ) : (
             <Button
               variant="warning"
+              style={{ height: 32, width: 100, fontSize: 12 }}
               onClick={() =>
                 dispatch({
                   type: "ADD_TO_CART",
